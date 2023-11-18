@@ -17,34 +17,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@47ng/cloak@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@47ng/cloak@npm:1.1.0"
-  dependencies:
-    "@47ng/codec": ^1.0.1
-    "@stablelib/base64": ^1.0.1
-    "@stablelib/hex": ^1.0.1
-    "@stablelib/utf8": ^1.0.1
-    chalk: ^4.1.2
-    commander: ^8.3.0
-    dotenv: ^10.0.0
-    s-ago: ^2.2.0
-  bin:
-    cloak: dist/cli.js
-  checksum: 7d72c66ff7837368e9ca8f5ba402d72041427eb47c53c340b4640e3352f2956d8673a4a8e97591fb2b9dfe27f3d2765bcd925617273ef2488df2565c77c78299
-  languageName: node
-  linkType: hard
-
-"@47ng/codec@npm:^1.0.1":
-  version: 1.1.0
-  resolution: "@47ng/codec@npm:1.1.0"
-  dependencies:
-    "@stablelib/base64": ^1.0.1
-    "@stablelib/hex": ^1.0.1
-  checksum: 4f780c4413fe78bbedbaff4135340c0e5f5a30df88f5cffbec51349eb0a1c909728e6c2bbda52506ff8c12653bf39b78c67b78bbe9501b0b9741da0cdaeec6ff
-  languageName: node
-  linkType: hard
-
 "@achrinza/event-pubsub@npm:5.0.8":
   version: 5.0.8
   resolution: "@achrinza/event-pubsub@npm:5.0.8"

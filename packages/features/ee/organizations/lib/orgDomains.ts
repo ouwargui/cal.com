@@ -1,6 +1,7 @@
 import type { Prisma } from "@prisma/client";
 import type { IncomingMessage } from "http";
 
+import { IS_PRODUCTION } from "@calcom/lib/constants";
 import { ALLOWED_HOSTNAMES, RESERVED_SUBDOMAINS, WEBAPP_URL } from "@calcom/lib/constants";
 import logger from "@calcom/lib/logger";
 import slugify from "@calcom/lib/slugify";
@@ -90,6 +91,9 @@ export function getOrgDomainConfigFromHostname({
 }
 
 export function subdomainSuffix() {
+  if (!IS_PRODUCTION && process.env.LOCAL_TESTING_DOMAIN_VERCEL) {
+    return process.env.LOCAL_TESTING_DOMAIN_VERCEL;
+  }
   const urlSplit = WEBAPP_URL.replace("https://", "")?.replace("http://", "").split(".");
   return urlSplit.length === 3 ? urlSplit.slice(1).join(".") : urlSplit.join(".");
 }

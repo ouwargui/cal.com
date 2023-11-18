@@ -54,7 +54,7 @@ export default function MemberListItem(props: Props) {
                     <span className="text-default mx-2 block">•</span>
                     <a
                       target="_blank"
-                      href={`${bookerUrl}/${user.username}`}
+                      href={`${user}/${user.username}`}
                       className="text-default block truncate text-sm">
                       {bookingLink}
                     </a>
