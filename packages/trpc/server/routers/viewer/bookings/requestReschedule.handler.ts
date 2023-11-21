@@ -188,7 +188,6 @@ export const requestRescheduleHandler = async ({ ctx, input }: RequestReschedule
     bookerUrl: eventType?.team
       ? await getBookerBaseUrl({ organizationId: eventType.team.parentId })
       : await getBookerBaseUrl(user),
-    type: event && event.title ? event.title : bookingToReschedule.title,
     type: event && event.slug ? event.slug : bookingToReschedule.title,
     startTime: bookingToReschedule.startTime.toISOString(),
     endTime: bookingToReschedule.endTime.toISOString(),
